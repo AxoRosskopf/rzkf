@@ -1,0 +1,11 @@
+.container, .fullContainer {
+    height: 70vh;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 0.5rem;
+    background-color: var(--background);
+    width: 50vw;
+}
+.fullContainer {
+    width: 98vw;
+    height: 95vh;
+}

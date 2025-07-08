@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.boxButtons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.2rem;
+    background-color: inherit;
+    border: none;
+    padding: 0;
+}
