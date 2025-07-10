@@ -10,14 +10,16 @@ const ButtonAux = ({onClick, children}: {onClick: () => void, children: React.Re
 }
 
 
-const HeaderWardrobe = ({content,onClose,onClick}:{content: string | undefined, onClose: () => void, onClick: () => void}) => {
+const HeaderWardrobe = ({ responsive ,content,onClose,onClick}:{responsive?: boolean, content: string | undefined, onClose: () => void, onClick: () => void}) => {
   return (
     <div className={style.container}>
       <h2>{content}</h2>
       <div className={style.boxButtons}>
-        <ButtonAux onClick={onClick}>
-          <VscWindow size={20} />
-        </ButtonAux>
+        {!responsive && (
+          <ButtonAux onClick={onClick}>
+            <VscWindow size={20} />
+          </ButtonAux>
+        )}
         <ButtonAux onClick={onClose}>
           <VscClose size={20} />
         </ButtonAux>

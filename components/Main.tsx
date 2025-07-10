@@ -9,6 +9,7 @@ type SelectActionProps = {
   openWardrobe: boolean,
   openModel: boolean
 }
+
 const Main = () => {
   const [actionWardrobe, setActionWardrobe] = useState<SelectActionProps>(
     {
@@ -16,6 +17,7 @@ const Main = () => {
       openWardrobe: false, 
       openModel: true
     })
+  
   const handlerActionModel2Wardrobe = (content: string | undefined) => {
     setActionWardrobe((prev) =>({...prev, openWardrobe: true, content: content}))
   }

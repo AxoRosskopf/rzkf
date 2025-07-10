@@ -3,9 +3,42 @@
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 0.5rem;
     background-color: var(--background);
-    width: 50vw;
+    width: 60vw;
 }
+
 .fullContainer {
     width: 98vw;
     height: 95vh;
+}
+
+.responsiveContainer {
+    display: none;
+    backdrop-filter: blur(4px);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(24, 24, 24, 0.658);
+
+}
+
+.responsiveBox{
+    margin-top:3rem ;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+    border-radius: 0.5rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+
+@media (max-width: 1020px) {
+    .container{
+        display: none;
+    }
+    .responsiveContainer{
+        display: flex;
+    }
 }
