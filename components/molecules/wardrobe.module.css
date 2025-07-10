@@ -4,6 +4,7 @@
     border-radius: 0.5rem;
     background-color: var(--background);
     width: 60vw;
+    overflow: scroll;
 }
 
 .fullContainer {

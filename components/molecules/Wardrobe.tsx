@@ -1,28 +1,32 @@
 import HeaderWardrobe from '../atoms/HeaderWardrobe'
+import ProductCollections from '../atoms/ProductCollections'
 import styles from './wardrobe.module.css'
 
 const Wardrobe = ({
   fullscreen,
   content,
   onClose,
-  onClick
+  onClickHeader,
+  onClickProduct
   }:{
   fullscreen: boolean,
-  content: string | undefined, 
+  content: string, 
   onClose: () => void, 
-  onClick: () => void
+  onClickHeader: () => void
+  onClickProduct: (id: number, name: string) => void
 }) => {
   
   return (
     <>
       <div className={fullscreen ? 
-        styles.fullCntainer : 
+        styles.fullContainer : 
         styles.container}>
         <HeaderWardrobe 
          content={content}
          onClose={onClose}
-         onClick={onClick} 
+         onClick={onClickHeader} 
          />
+        <ProductCollections onClick={onClickProduct} content={content} />
       </div>
       <div className={styles.responsiveContainer} onClick={onClose}>
         <div 
@@ -33,8 +37,8 @@ const Wardrobe = ({
               responsive 
               content={content} 
               onClose={onClose} 
-              onClick={onClick} 
             />
+            <ProductCollections onClick={onClickProduct} content={content} />
         </div>
       </div>
     </>

@@ -1,12 +1,17 @@
 import styles from './model.module.css'
 import Select from './molecules/Select'
 
-const Model = ({onClick}:{onClick: (content: string | undefined) => void}) => {
+const Model = ({onClick, stack}:{onClick: (content: string | undefined) => void, stack: Map<number, Set<string>>}) => {
   return (
     <div className={styles.container}>
-        <Select content="Option 1" onClick={() => onClick("Option 1")} />
-        <Select content="Option 2" onClick={() => onClick("Option 2")} />
-        <Select content="Option 3" onClick={() => onClick("Option 3")} />
+      {Array.from(stack.entries()).map(([id, products]) => (
+        <Select 
+          key={id} 
+          content={`${id}`} 
+          onClick={() => onClick(`${id}`)} 
+          products={products}
+        />
+      ))}
     </div>
   )
 }

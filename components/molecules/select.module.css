@@ -1,5 +1,6 @@
-.container {
+.container{
     background-color: var(--background);
+    position: relative;
     width: 8rem;
     aspect-ratio: 8/9;
     border-radius: 0.5rem;
@@ -11,6 +12,42 @@
     transition: width 0.4s ease;
 }
 
-.container:hover {
-    width: 8.3rem;
+.container:hover{
+    scale: 1.01;
+}
+
+.productBox {
+    background-color: var(--background);
+    position: absolute;
+    width: 8rem;
+    aspect-ratio: 8/9;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: width 0.4s ease;
+}
+
+.productBox:hover{
+    cursor: pointer;
+    rotate: 0.02turn;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+
+
+.count{
+    background-color: rgb(197, 1, 1);
+    padding: 0.1rem;
+    color: var(--background);
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -0.2rem;
+    right: -0.2rem;
 }
